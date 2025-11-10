@@ -8,9 +8,15 @@ export default function Header() {
       <div className="flex justify-between border border-gray-300 rounded-full bg-black/30 backdrop-blur-md 
         pr-20 pl-20 pt-4 pb-4 m-10 text-center">
         <div>
-          <p className=" text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#FAD4D8] to-[#FC440F]">
-            Eder Moros
-          </p>
+          <a 
+            href="#home"
+            onClick={() => setActiveLink('home')}
+            className="cursor-pointer"
+          >
+            <p className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#FAD4D8] to-[#FC440F]">
+              Eder Moros
+            </p>
+          </a>
         </div>
         <div>
           <nav className="text-white text-2xl font-bold flex gap-3 ">
