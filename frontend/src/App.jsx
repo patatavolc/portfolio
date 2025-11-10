@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import DotGrid from "./components/DotGrid/DotGrid.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 export default function App() {
   return (
@@ -22,11 +23,12 @@ export default function App() {
 
       {/* Contenido */}
       <Header />
-      <main className="flex flex-col items-center justify-center ">
+      <main className="flex flex-col items-center justify-center h-lvh ">
         <h1 className="text-white text-4xl font-bold">Contenido encima</h1>
       </main>
+
+      {/* Botón de volver arriba */}
+      <ScrollToTop />
     </div>
   );
 }
-
-
