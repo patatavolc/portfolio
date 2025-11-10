@@ -22,7 +22,7 @@ export default function App() {
 
       {/* Contenido */}
       <Header />
-      <main className="flex flex-col items-center justify-center h-[200vh]">
+      <main className="flex flex-col items-center justify-center ">
         <h1 className="text-white text-4xl font-bold">Contenido encima</h1>
       </main>
     </div>

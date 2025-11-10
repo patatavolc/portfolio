@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 body {
+  font-family: "Momo Trust Display";
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
   margin-block: 0;
   background-color: #0E0017;
 }
+
