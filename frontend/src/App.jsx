@@ -3,6 +3,7 @@ import Header from "./components/Header/Header.jsx";
 import DotGrid from "./components/DotGrid/DotGrid.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import TextType from "./components/TextType/TextType.jsx";
+import Buttons from "./components/Buttons/Buttons.jsx";
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
             Enhancing digital experiences that are smooth, scalable, and made to
             impress.
           </p>
+          <Buttons />
         </div>
       </section>
 
