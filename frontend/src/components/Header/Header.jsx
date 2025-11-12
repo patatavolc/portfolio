@@ -61,17 +61,17 @@ export default function Header() {
 
             <a
               className="group px-1 py-2 text-xs md:text-sm font-medium"
-              href="#portfolio"
-              onClick={() => setActiveLink("portfolio")}
+              href="#projects"
+              onClick={() => setActiveLink("projects")}
             >
               <span
                 className={`relative inline-block transition-colors duration-300 font-semibold ${
-                  activeLink === "portfolio"
+                  activeLink === "projects"
                     ? "text-transparent bg-clip-text bg-linear-to-r from-[#FAD4D8] to-[#FC440F]"
                     : "text-white"
                 }`}
               >
-                Portfolio
+                Projects
                 <span
                   className="absolute left-0 top-full translate-y-1 w-full h-0.5 bg-linear-to-r from-[#fad4d8] to-[#fc440f] transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
                   aria-hidden="true"

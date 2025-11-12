@@ -3,9 +3,11 @@ import Header from "./components/Header/Header.jsx";
 import DotGrid from "./components/DotGrid/DotGrid.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import TextType from "./components/TextType/TextType.jsx";
-import Buttons from "./components/Buttons/Buttons.jsx";
+import Button from "./components/Button/Button.jsx";
 
 export default function App() {
+  const cv_path = "../public/CV.pdf";
+
   return (
     <div className="relative min-h-screen">
       {/* Fondo global */}
@@ -25,7 +27,7 @@ export default function App() {
 
       {/* Contenido */}
       <Header />
-      <section className="relative z-10 flex flex-col justify-center text-white overflow-hidden mt-50">
+      <section className="relative z-10 flex flex-col justify-center text-white overflow-hidden mt-50 mb-50">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
             <span className="block text-white">Full Stack</span>
@@ -52,10 +54,34 @@ export default function App() {
             Enhancing digital experiences that are smooth, scalable, and made to
             impress.
           </p>
-          <Buttons />
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button text="Projects" href="#projects" />
+            <Button text="Contact" href="#contact" />
+          </div>
         </div>
       </section>
 
+      <section
+        id="about"
+        className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-80"
+      >
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
+            <span className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h1>
+
+          <p className="mt-5 text-lg text-gray-400 max-w-l mb-5">
+            Hello, I'm Eder Moros, a passionate about building smart and
+            scalable web applications. I'm currently studying a Higher
+            Vocational Degree in Web Application Development and teaching myself
+            varius technologies. I plan to transition into the AI and data
+            science industry around 2027.
+          </p>
+          <Button text="Ver CV" href={cv_path} external />
+        </div>
+      </section>
       {/* Botón de volver arriba */}
       <ScrollToTop />
     </div>
