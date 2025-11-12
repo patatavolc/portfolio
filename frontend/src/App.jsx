@@ -9,6 +9,69 @@ export default function App() {
   const cv_path =
     "https://drive.google.com/file/d/1JK-HAtxQFx-RWY4-MckOc6Lx2Q1kkUXA/view?usp=sharing";
 
+  const ExternalLinkIcon = (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+      <path d="M11 13l9 -9" />
+      <path d="M15 4h5v5" />
+    </svg>
+  );
+
+  const CvIcon = (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-file-cv"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+      <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+      <path d="M13 11l1.5 6l1.5 -6" />
+    </svg>
+  );
+
+  const MailIcon = (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+      <path d="M3 7l9 6l9 -6" />
+    </svg>
+  );
+
   return (
     <div className="relative min-h-screen">
       {/* Fondo global */}
@@ -56,8 +119,12 @@ export default function App() {
             impress.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Button text="Projects" href="#projects" />
-            <Button text="Contact" href="#contact" />
+            <Button
+              text="Projects"
+              href="#projects"
+              IconComponent={ExternalLinkIcon}
+            />
+            <Button text="Contact" href="#contact" IconComponent={MailIcon} />
           </div>
         </div>
       </section>
@@ -78,7 +145,12 @@ export default function App() {
             science industry around 2027.
           </p>
           <div className="flex justify-center">
-            <Button text="Ver CV" href={cv_path} external />
+            <Button
+              text="Ver CV"
+              href={cv_path}
+              external
+              IconComponent={CvIcon}
+            />
           </div>
         </div>
       </section>
