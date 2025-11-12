@@ -4,6 +4,8 @@ import DotGrid from "./components/DotGrid/DotGrid.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import TextType from "./components/TextType/TextType.jsx";
 import Button from "./components/Button/Button.jsx";
+import { projectsData } from "./data.js";
+import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
 
 export default function App() {
   const cv_path =
@@ -137,14 +139,14 @@ export default function App() {
             </span>
           </h1>
 
-          <p id="about" className="mt-5 text-lg text-gray-400 max-w-l mb-5">
+          <p className="mt-5 text-lg text-gray-400 text-left max-w-l mb-5">
             Hello, I'm Eder Moros, a passionate about building smart and
             scalable web applications. I'm currently studying a Higher
             Vocational Degree in Web Application Development and teaching myself
-            varius technologies. I plan to transition into the AI and data
+            varius technologies. <br />I plan to transition into the AI and data
             science industry around 2027.
           </p>
-          <div className="flex justify-center">
+          <div id="about" className="flex justify-center">
             <Button
               text="Ver CV"
               href={cv_path}
@@ -152,6 +154,23 @@ export default function App() {
               IconComponent={CvIcon}
             />
           </div>
+        </div>
+      </section>
+
+      <section className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-85">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
+            <span
+              id="projects"
+              className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-transparent"
+            >
+              Projects
+            </span>
+          </h1>
+
+          {projectsData.map((project) => {
+            <ProjectCard key={projectsData.id} project={project} />;
+          })}
         </div>
       </section>
       {/* Botón de volver arriba */}
