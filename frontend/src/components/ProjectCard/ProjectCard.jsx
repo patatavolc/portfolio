@@ -1,71 +1,87 @@
-import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { getTechColor } from '../../data'; // Importamos la función de color
+import React from "react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { getTechColor } from "../../data"; // Importamos la función de color
 
 const ProjectCard = ({ project }) => {
   // Desestructuramos los datos del proyecto
-  const { title, description, technologies, dates, githubUrl, liveUrl, imageUrl } = project;
+  const {
+    title,
+    description,
+    technologies,
+    dates,
+    githubUrl,
+    liveUrl,
+    imageUrl,
+  } = project;
 
   return (
-    // 1. Contenedor Principal de la Tarjeta (Estilos Oscuros de Tailwind)
-    <div className="rounded-xl shadow-2xl p-4 bg-gray-800 text-gray-100 
-                    hover:shadow-cyan-500/50 transition-shadow duration-300 border border-gray-700 
-                    flex flex-col h-full"> {/* h-full y flex-col aseguran que todas las cards tengan la misma altura */}
-      
-      {/* 2. Contenedor del Mockup/Imagen (Renderizado condicional) */}
+    <article className="w-full h-full p-6 rounded-lg bg-[#1f1b2a] shadow-lg flex flex-col">
+      {/* 1. Contenedor del Mockup/Imagen (Renderizado condicional) */}
       {imageUrl && (
         <div className="w-full mb-4 rounded-lg overflow-hidden border border-gray-700 bg-gray-900">
-          <img 
-            src={imageUrl} 
-            alt={`Captura de ${title}`} 
+          <img
+            src={imageUrl}
+            alt={`Captura de ${title}`}
             className="w-full h-auto"
           />
         </div>
       )}
 
-      {/* 3. Título y Enlaces */}
+      {/* 2. Título y Enlaces */}
       <div className="flex justify-between items-start mb-3">
-        <h2 className="text-2xl font-bold text-cyan-400">
-          {title}
-        </h2>
+        <h2 className="text-2xl font-bold text-cyan-400">{title}</h2>
         <div className="flex space-x-3 text-xl text-gray-400">
           {githubUrl && (
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" title="Ver en GitHub">
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+              title="Ver en GitHub"
+            >
               <FaGithub />
             </a>
           )}
           {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" title="Ver demo en vivo">
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+              title="Ver demo en vivo"
+            >
               <FaExternalLinkAlt />
             </a>
           )}
         </div>
       </div>
 
-      {/* 4. Etiquetas de Tecnología */}
+      {/* 3. Etiquetas de Tecnología */}
       <div className="flex flex-wrap gap-2 mb-4">
         {technologies.map((tech, index) => (
-          <span 
-            key={index} 
+          <span
+            key={index}
             // Usamos getTechColor para aplicar las clases de color definidas en data.js
-            className={`text-xs font-semibold px-3 py-1 rounded-full ${getTechColor(tech)} shadow-md`}
+            className={`text-xs font-semibold px-3 py-1 rounded-full ${getTechColor(
+              tech
+            )} shadow-md`}
           >
             {tech}
           </span>
         ))}
       </div>
 
-      {/* 5. Descripción */}
+      {/* 4. Descripción */}
       {/* flex-grow para que la descripción ocupe el espacio restante si hay alturas variables */}
       <p className="text-sm leading-relaxed mb-4 text-gray-300 grow">
         {description}
       </p>
 
-      {/* 6. Fechas (Separador) */}
+      {/* 5. Fechas (Separador) */}
       <div className="pt-3 border-t border-gray-700 text-xs text-gray-500 mt-auto">
         {dates}
       </div>
-    </div>
+    </article>
   );
 };
 

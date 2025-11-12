@@ -6,6 +6,7 @@ import TextType from "./components/TextType/TextType.jsx";
 import Button from "./components/Button/Button.jsx";
 import { projectsData } from "./data.js";
 import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 export default function App() {
   const cv_path =
@@ -19,9 +20,9 @@ export default function App() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
       {...props}
     >
@@ -40,9 +41,9 @@ export default function App() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-file-cv"
       {...props}
     >
@@ -62,9 +63,9 @@ export default function App() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
       {...props}
     >
@@ -131,22 +132,25 @@ export default function App() {
         </div>
       </section>
 
-      <section className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-85">
+      <section
+        id="about"
+        className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-85"
+      >
         <div className="max-w-4xl mx-auto px-6">
           <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
-            <span className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-center text-transparent">
               About Me
             </span>
           </h1>
 
-          <p className="mt-5 text-lg text-gray-400 text-left max-w-l mb-5">
+          <p className="mt-5 text-lg text-gray-400 text-center text-wrap max-w-l mb-5">
             Hello, I'm Eder Moros, a passionate about building smart and
             scalable web applications. I'm currently studying a Higher
             Vocational Degree in Web Application Development and teaching myself
             varius technologies. <br />I plan to transition into the AI and data
             science industry around 2027.
           </p>
-          <div id="about" className="flex justify-center">
+          <div className="flex justify-center">
             <Button
               text="Ver CV"
               href={cv_path}
@@ -158,20 +162,26 @@ export default function App() {
       </section>
 
       <section className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-85">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
             <span
               id="projects"
-              className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-transparent"
+              className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text  text-center text-transparent"
             >
               Projects
             </span>
           </h1>
 
-          {projectsData.map((project) => {
-            <ProjectCard key={projectsData.id} project={project} />;
-          })}
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-8 items-stretch">
+            {projectsData.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
         </div>
+      </section>
+
+      <section id="contact" className="relative z-10">
+        <Contact />
       </section>
       {/* Botón de volver arriba */}
       <ScrollToTop />

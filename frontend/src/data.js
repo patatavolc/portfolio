@@ -16,7 +16,7 @@ export const getTechColor = (tech) => {
     // Frontend
     javascript: "bg-yellow-500 text-gray-900",
     typescript: "bg-blue-600",
-    react: "bg-cyan text-gray-900",
+    react: "bg-blue-400 text-gray-900",
     html: "bg-orange-600",
     css: "bg-blue-400",
 
@@ -37,7 +37,7 @@ export const projectsData = [
   {
     id: 1,
     title: "nodoLab",
-    description: "[Web Application for a coworking",
+    description: "Web Application for a coworking",
     // Las tecnologías deben ser cadenas de texto exactas a las definidas en getTechColor (ej: "NodeJS", "JavaScript")
     technologies: [
       "NodeJS",
@@ -65,7 +65,7 @@ export const projectsData = [
   {
     id: 3,
     title: "Vault",
-    description: "[A web for a techno club like Blackworks (for class)]",
+    description: "A web for a techno club like Blackworks (for class)",
     technologies: ["HTML", "CSS", "JavaScript"],
     dates: "[Oct 2025]",
     githubUrl: "https://github.com/CarlosDZ/Vault",
@@ -74,7 +74,7 @@ export const projectsData = [
   },
   {
     id: 4, // Usa el siguiente ID consecutivo
-    title: "TFG: App Peluquería",
+    title: "TFG: Web Peluquería",
     description:
       "A management and booking application for hair salons, developed as a Final Degree Project. It includes an authentication system, service administration, appointment management, invoice handling, inventory, and more.",
     technologies: [
@@ -84,7 +84,7 @@ export const projectsData = [
       "TypeScript",
       "HTML",
       "CSS",
-      "REACT",
+      "React",
     ],
     dates: "Sep 2025 - Feb 2025",
     githubUrl: "https://github.com/patatavolc/tfg-peluqueria",
