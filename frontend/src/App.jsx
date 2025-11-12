@@ -7,7 +7,7 @@ import Button from "./components/Button/Button.jsx";
 
 export default function App() {
   const cv_path =
-    "https://drive.google.com/file/d/1pLo2m1kgX2zrFkulQS4CKiKcIwX-WWpm/view?usp=sharing";
+    "https://drive.google.com/file/d/1JK-HAtxQFx-RWY4-MckOc6Lx2Q1kkUXA/view?usp=sharing";
 
   return (
     <div className="relative min-h-screen">
