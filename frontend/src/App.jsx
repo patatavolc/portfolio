@@ -6,7 +6,8 @@ import TextType from "./components/TextType/TextType.jsx";
 import Button from "./components/Button/Button.jsx";
 
 export default function App() {
-  const cv_path = "../public/CV.pdf";
+  const cv_path =
+    "https://drive.google.com/file/d/1pLo2m1kgX2zrFkulQS4CKiKcIwX-WWpm/view?usp=sharing";
 
   return (
     <div className="relative min-h-screen">
@@ -63,7 +64,7 @@ export default function App() {
 
       <section
         id="about"
-        className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-80"
+        className=" relative z-10 flex flex-col justify-center text-white overflow-hidden mt-85"
       >
         <div className="max-w-4xl mx-auto px-6">
           <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
