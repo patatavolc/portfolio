@@ -1,0 +1,66 @@
+import {
+  SiReact,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiDocker,
+  SiVite,
+  SiHtml5,
+  SiCss3,
+  SiNextdotjs,
+  SiFirebase,
+  SiPrisma,
+  SiGraphql,
+  SiSass,
+  SiWebpack,
+  SiPython,
+  SiDjango,
+  SiJava,
+  SiSpring,
+} from "react-icons/si";
+
+// Mapa simple: clave en minúsculas -> componente de icono
+const icons = {
+  react: SiReact,
+  tailwind: SiTailwindcss,
+  tailwindcss: SiTailwindcss,
+  javascript: SiJavascript,
+  js: SiJavascript,
+  typescript: SiTypescript,
+  ts: SiTypescript,
+  node: SiNodedotjs,
+  nodejs: SiNodedotjs,
+  express: SiExpress,
+  postgres: SiPostgresql,
+  postgresql: SiPostgresql,
+  mysql: SiMysql,
+  mongodb: SiMongodb,
+  docker: SiDocker,
+  vite: SiVite,
+  html: SiHtml5,
+  html5: SiHtml5,
+  css: SiCss3,
+  css3: SiCss3,
+  next: SiNextdotjs,
+  nextjs: SiNextdotjs,
+  firebase: SiFirebase,
+  prisma: SiPrisma,
+  graphql: SiGraphql,
+  sass: SiSass,
+  webpack: SiWebpack,
+  python: SiPython,
+  django: SiDjango,
+  java: SiJava,
+  spring: SiSpring,
+};
+
+export function getTechIcon(tech) {
+  if (!tech) return null;
+  const key = String(tech).toLowerCase();
+  return icons[key] || null;
+}

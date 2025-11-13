@@ -47,33 +47,24 @@ export const projectsData = [
       "React",
       "Tailwindcss",
     ],
-    dates: "[Oct 2025 - Nov 2025",
+    dates: "Oct 2025 - Nov 2025",
     githubUrl: "https://github.com/patatavolc/nodoLab",
     liveUrl: "#", // Si tienes un demo en vivo, ponlo aquí. Si no, usa "#"
     imageUrl: nodoLabImage,
   },
+
   {
     id: 2,
-    title: "Hostelería",
-    description: "TPV for a restaurant",
-    technologies: ["Java", "MariaDB"],
-    dates: "[Apr 2025 - May 2025]",
-    githubUrl: "https://github.com/javiifu/Hosteler-a",
-    liveUrl: "#",
-    imageUrl: placeholderImage,
-  },
-  {
-    id: 3,
     title: "Vault",
     description: "A web for a techno club like Blackworks (for class)",
     technologies: ["HTML", "CSS", "JavaScript"],
-    dates: "[Oct 2025]",
+    dates: "Oct 2025",
     githubUrl: "https://github.com/CarlosDZ/Vault",
-    liveUrl: "#",
+    liveUrl: "https://thevaultexperience.netlify.app",
     imageUrl: vaultImage,
   },
   {
-    id: 4, // Usa el siguiente ID consecutivo
+    id: 3, // Usa el siguiente ID consecutivo
     title: "TFG: Web Peluquería",
     description:
       "A management and booking application for hair salons, developed as a Final Degree Project. It includes an authentication system, service administration, appointment management, invoice handling, inventory, and more.",
@@ -90,5 +81,15 @@ export const projectsData = [
     githubUrl: "https://github.com/patatavolc/tfg-peluqueria",
     liveUrl: "#",
     imageUrl: tfgImage,
+  },
+  {
+    id: 4,
+    title: "Hostelería",
+    description: "TPV for a restaurant",
+    technologies: ["Java", "MariaDB"],
+    dates: "[Apr 2025 - May 2025]",
+    githubUrl: "https://github.com/javiifu/Hosteler-a",
+    liveUrl: "#",
+    imageUrl: placeholderImage,
   },
 ];
