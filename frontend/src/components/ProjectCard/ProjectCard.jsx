@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { getTechIcon } from "../../utils/techIcons";
 import { getTechColor } from "../../data"; // Importamos la función de color
 
 const ProjectCard = ({ project }) => {
@@ -58,17 +59,21 @@ const ProjectCard = ({ project }) => {
 
       {/* 3. Etiquetas de Tecnología */}
       <div className="flex flex-wrap gap-2 mb-4">
-        {technologies.map((tech, index) => (
-          <span
-            key={index}
-            // Usamos getTechColor para aplicar las clases de color definidas en data.js
-            className={`text-xs font-semibold px-3 py-1 rounded-full ${getTechColor(
-              tech
-            )} shadow-md`}
-          >
-            {tech}
-          </span>
-        ))}
+        {technologies.map((tech, index) => {
+          const Icon = getTechIcon(tech);
+          const colorClass = getTechColor(tech); // tu función existente para clases de color
+          return (
+            <span
+              key={`${tech}-${index}`}
+              className={`inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full ${colorClass} shadow-md gap-2`}
+            >
+              {Icon ? (
+                <Icon className="w-4 h-4 text-white" aria-hidden="true" />
+              ) : null}
+              <span className="capitalize">{tech}</span>
+            </span>
+          );
+        })}
       </div>
 
       {/* 4. Descripción */}

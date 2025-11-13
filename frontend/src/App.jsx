@@ -6,7 +6,6 @@ import TextType from "./components/TextType/TextType.jsx";
 import Button from "./components/Button/Button.jsx";
 import { projectsData } from "./data.js";
 import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
-import Contact from "./components/Contact/Contact.jsx";
 
 export default function App() {
   const cv_path =
@@ -180,9 +179,6 @@ export default function App() {
         </div>
       </section>
 
-      <section id="contact" className="relative z-10">
-        <Contact />
-      </section>
       {/* Botón de volver arriba */}
       <ScrollToTop />
     </div>

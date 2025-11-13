@@ -20,7 +20,6 @@ import {
   SiWebpack,
   SiPython,
   SiDjango,
-  SiJava,
   SiSpring,
 } from "react-icons/si";
 
@@ -55,7 +54,6 @@ const icons = {
   webpack: SiWebpack,
   python: SiPython,
   django: SiDjango,
-  java: SiJava,
   spring: SiSpring,
 };
 
