@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Full Stack",
+    "subtitle": "Developer",
+    "typing": {
+      "text1": "Tech enthusiast",
+      "text2": "Web development student",
+      "text3": "Ready to innovate!"
+    },
+    "description": "Enhancing digital experiences that are smooth, scalable, and made to impress.",
+    "projectsBtn": "Projects",
+    "contactBtn": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hello, I'm Eder Moros, a passionate about building smart and scalable web applications. I'm currently studying a Higher Vocational Degree in Web Application Development and teaching myself various technologies. I plan to transition into the AI and data science industry around 2027.",
+    "cvBtn": "View CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewGithub": "View on GitHub",
+    "viewLive": "View live demo",
+    "project1": {
+      "title": "nodoLab",
+      "description": "Web Application for a coworking"
+    },
+    "project2": {
+      "title": "Vault",
+      "description": "A web for a techno club like Blackworks (for class)"
+    },
+    "project3": {
+      "title": "TFG: Web Peluquería",
+      "description": "A management and booking application for hair salons, developed as a Final Degree Project. It includes an authentication system, service administration, appointment management, invoice handling, inventory, and more."
+    },
+    "project4": {
+      "title": "Hostelería",
+      "description": "TPV for a restaurant"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "formTitle": "Contact",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Your Message",
+    "placeholders": {
+      "fullName": "Enter your name",
+      "email": "Enter your email",
+      "subject": "Subject (optional)",
+      "message": "Enter your message"
+    },
+    "sendBtn": "Send message",
+    "required": "*",
+    "validationError": "Please fill in all required fields (Name, Email, Message)."
+  }
+}

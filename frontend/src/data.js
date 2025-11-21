@@ -36,8 +36,8 @@ export const getTechColor = (tech) => {
 export const projectsData = [
   {
     id: 1,
-    title: "nodoLab",
-    description: "Web Application for a coworking",
+    titleKey: "projects.project1.title",
+    descriptionKey: "projects.project1.description",
     // Las tecnologías deben ser cadenas de texto exactas a las definidas en getTechColor (ej: "NodeJS", "JavaScript")
     technologies: [
       "NodeJS",
@@ -55,8 +55,8 @@ export const projectsData = [
 
   {
     id: 2,
-    title: "Vault",
-    description: "A web for a techno club like Blackworks (for class)",
+    titleKey: "projects.project2.title",
+    descriptionKey: "projects.project2.description",
     technologies: ["HTML", "CSS", "JavaScript"],
     dates: "Oct 2025",
     githubUrl: "https://github.com/CarlosDZ/Vault",
@@ -65,9 +65,8 @@ export const projectsData = [
   },
   {
     id: 3, // Usa el siguiente ID consecutivo
-    title: "TFG: Web Peluquería",
-    description:
-      "A management and booking application for hair salons, developed as a Final Degree Project. It includes an authentication system, service administration, appointment management, invoice handling, inventory, and more.",
+    titleKey: "projects.project3.title",
+    descriptionKey: "projects.project3.description",
     technologies: [
       "NodeJS",
       "Express",
@@ -84,8 +83,8 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Hostelería",
-    description: "TPV for a restaurant",
+    titleKey: "projects.project4.title",
+    descriptionKey: "projects.project4.description",
     technologies: ["Java", "MariaDB"],
     dates: "[Apr 2025 - May 2025]",
     githubUrl: "https://github.com/javiifu/Hosteler-a",

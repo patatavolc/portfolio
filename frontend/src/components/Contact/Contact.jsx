@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -16,7 +18,7 @@ export default function Contact() {
 
     // Validación básica
     if (!form.fullName || !form.email || !form.message) {
-      alert("Please fill in all required fields (Name, Email, Message).");
+      alert(t("contact.validationError"));
       return;
     }
 
@@ -64,52 +66,60 @@ export default function Contact() {
         className="max-w-2xl w-full p-6 rounded-lg bg-white/5 backdrop-blur-sm shadow-md"
         aria-label="Contact form"
       >
-        <h2 className="text-2xl font-bold mb-4 text-white">Contact</h2>
+        <h2 className="text-2xl font-bold mb-4 text-white">
+          {t("contact.formTitle")}
+        </h2>
 
         <label className="block mb-3">
-          <span className="text-sm text-gray-300">Full Name *</span>
+          <span className="text-sm text-gray-300">
+            {t("contact.fullName")} {t("contact.required")}
+          </span>
           <input
             name="fullName"
             value={form.fullName}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md p-2 bg-gray-900 border border-gray-700 text-white focus:border-[#fc440f] focus:outline-none"
-            placeholder="Enter your name"
+            placeholder={t("contact.placeholders.fullName")}
             required
           />
         </label>
 
         <label className="block mb-3">
-          <span className="text-sm text-gray-300">Email Address *</span>
+          <span className="text-sm text-gray-300">
+            {t("contact.email")} {t("contact.required")}
+          </span>
           <input
             name="email"
             type="email"
             value={form.email}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md p-2 bg-gray-900 border border-gray-700 text-white focus:border-[#fc440f] focus:outline-none"
-            placeholder="Enter your email"
+            placeholder={t("contact.placeholders.email")}
             required
           />
         </label>
 
         <label className="block mb-3">
-          <span className="text-sm text-gray-300">Subject</span>
+          <span className="text-sm text-gray-300">{t("contact.subject")}</span>
           <input
             name="subject"
             value={form.subject}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md p-2 bg-gray-900 border border-gray-700 text-white focus:border-[#fc440f] focus:outline-none"
-            placeholder="Subject (optional)"
+            placeholder={t("contact.placeholders.subject")}
           />
         </label>
 
         <label className="block mb-4">
-          <span className="text-sm text-gray-300">Your Message *</span>
+          <span className="text-sm text-gray-300">
+            {t("contact.message")} {t("contact.required")}
+          </span>
           <textarea
             name="message"
             value={form.message}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md p-2 h-36 bg-gray-900 border border-gray-700 text-white resize-vertical focus:border-[#fc440f] focus:outline-none"
-            placeholder="Enter your message"
+            placeholder={t("contact.placeholders.message")}
             required
           />
         </label>
@@ -119,7 +129,7 @@ export default function Contact() {
             type="submit"
             className="px-6 py-3 rounded-md bg-linear-to-r from-[#fad4d8] to-[#fc440f] text-black font-semibold hover:scale-105 transition-transform duration-200"
           >
-            Send message
+            {t("contact.sendBtn")}
           </button>
         </div>
       </form>
