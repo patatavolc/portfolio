@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Full Stack",
+    "subtitle": "Developer",
+    "typing": {
+      "text1": "Entusiasta de la tecnología",
+      "text2": "Estudiante de desarrollo web",
+      "text3": "¡Listo para innovar!"
+    },
+    "description": "Mejorando experiencias digitales que son fluidas, escalables y hechas para impresionar.",
+    "projectsBtn": "Proyectos",
+    "contactBtn": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Hola, soy Eder Moros, un apasionado de la creación de aplicaciones web inteligentes y escalables. Actualmente estoy estudiando un Grado Superior en Desarrollo de Aplicaciones Web y aprendiendo varias tecnologías por mi cuenta. Planeo hacer la transición a la industria de IA y ciencia de datos alrededor de 2027.",
+    "cvBtn": "Ver CV"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewGithub": "Ver en GitHub",
+    "viewLive": "Ver demo en vivo",
+    "project1": {
+      "title": "nodoLab",
+      "description": "Aplicación web para un coworking"
+    },
+    "project2": {
+      "title": "Vault",
+      "description": "Una web para un club techno como Blackworks (para clase)"
+    },
+    "project3": {
+      "title": "TFG: Web Peluquería",
+      "description": "Una aplicación de gestión y reservas para peluquerías, desarrollada como Trabajo de Fin de Grado. Incluye un sistema de autenticación, administración de servicios, gestión de citas, manejo de facturas, inventario y más."
+    },
+    "project4": {
+      "title": "Hostelería",
+      "description": "TPV para un restaurante"
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "formTitle": "Contacto",
+    "fullName": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "subject": "Asunto",
+    "message": "Tu Mensaje",
+    "placeholders": {
+      "fullName": "Ingresa tu nombre",
+      "email": "Ingresa tu correo",
+      "subject": "Asunto (opcional)",
+      "message": "Ingresa tu mensaje"
+    },
+    "sendBtn": "Enviar mensaje",
+    "required": "*",
+    "validationError": "Por favor, completa todos los campos requeridos (Nombre, Correo, Mensaje)."
+  }
+}

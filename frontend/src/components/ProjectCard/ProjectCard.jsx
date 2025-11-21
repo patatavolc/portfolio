@@ -1,19 +1,24 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { getTechIcon } from "../../utils/techIcons";
 import { getTechColor } from "../../data"; // Importamos la función de color
 
 const ProjectCard = ({ project }) => {
+  const { t } = useTranslation();
   // Desestructuramos los datos del proyecto
   const {
-    title,
-    description,
+    titleKey,
+    descriptionKey,
     technologies,
     dates,
     githubUrl,
     liveUrl,
     imageUrl,
   } = project;
+
+  const title = t(titleKey);
+  const description = t(descriptionKey);
 
   return (
     <article className="w-full h-full p-6 rounded-lg bg-[#1f1b2a] shadow-lg flex flex-col">
@@ -38,7 +43,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition-colors"
-              title="Ver en GitHub"
+              title={t("projects.viewGithub")}
             >
               <FaGithub />
             </a>
@@ -49,7 +54,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition-colors"
-              title="Ver demo en vivo"
+              title={t("projects.viewLive")}
             >
               <FaExternalLinkAlt />
             </a>

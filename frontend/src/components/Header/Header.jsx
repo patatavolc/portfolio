@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "../LanguageToggle/LanguageToggle.jsx";
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState("home");
+  const { t } = useTranslation();
 
   return (
     <header className="w-full bg-transparent">
@@ -31,7 +34,7 @@ export default function Header() {
                     : "text-white"
                 }`}
               >
-                Home
+                {t("nav.home")}
                 <span
                   className="absolute left-0 top-full translate-y-1 w-full h-0.5 bg-linear-to-r from-[#fad4d8] to-[#fc440f] transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
                   aria-hidden="true"
@@ -51,7 +54,7 @@ export default function Header() {
                     : "text-white"
                 }`}
               >
-                About
+                {t("nav.about")}
                 <span
                   className="absolute left-0 top-full translate-y-1 w-full h-0.5 bg-linear-to-r from-[#fad4d8] to-[#fc440f] transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
                   aria-hidden="true"
@@ -71,7 +74,7 @@ export default function Header() {
                     : "text-white"
                 }`}
               >
-                Projects
+                {t("nav.projects")}
                 <span
                   className="absolute left-0 top-full translate-y-1 w-full h-0.5 bg-linear-to-r from-[#fad4d8] to-[#fc440f] transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
                   aria-hidden="true"
@@ -91,13 +94,15 @@ export default function Header() {
                     : "text-white"
                 }`}
               >
-                Contact
+                {t("nav.contact")}
                 <span
                   className="absolute left-0 top-full translate-y-1 w-full h-0.5 bg-linear-to-r from-[#fad4d8] to-[#fc440f] transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"
                   aria-hidden="true"
                 ></span>
               </span>
             </a>
+
+            <LanguageToggle />
           </nav>
         </div>
       </div>

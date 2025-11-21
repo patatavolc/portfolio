@@ -1,4 +1,5 @@
 import "./App.css";
+import { useTranslation } from "react-i18next";
 import Header from "./components/Header/Header.jsx";
 import DotGrid from "./components/DotGrid/DotGrid.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
@@ -9,6 +10,7 @@ import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 
 export default function App() {
+  const { t } = useTranslation();
   const cv_path =
     "https://drive.google.com/file/d/1JK-HAtxQFx-RWY4-MckOc6Lx2Q1kkUXA/view?usp=sharing";
 
@@ -97,18 +99,18 @@ export default function App() {
       <section className="relative z-10 flex flex-col justify-center text-white overflow-hidden mt-50 mb-50">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-            <span className="block text-white">Full Stack</span>
+            <span className="block text-white">{t("hero.title")}</span>
             <span className="block bg-linear-to-r from-[#FAD4D8] to-[#FC440F] bg-clip-text text-transparent">
-              Developer
+              {t("hero.subtitle")}
             </span>
           </h1>
 
           <div className="text-lg">
             <TextType
               text={[
-                "Tech enthusiast",
-                "Web development student",
-                "Ready to innovate!",
+                t("hero.typing.text1"),
+                t("hero.typing.text2"),
+                t("hero.typing.text3"),
               ]}
               typingSpeed={75}
               pauseDuration={1500}
@@ -118,16 +120,19 @@ export default function App() {
           </div>
 
           <p className="mt-6 text-lg text-gray-400 max-w-l">
-            Enhancing digital experiences that are smooth, scalable, and made to
-            impress.
+            {t("hero.description")}
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Button
-              text="Projects"
+              text={t("hero.projectsBtn")}
               href="#projects"
               IconComponent={ExternalLinkIcon}
             />
-            <Button text="Contact" href="#contact" IconComponent={MailIcon} />
+            <Button
+              text={t("hero.contactBtn")}
+              href="#contact"
+              IconComponent={MailIcon}
+            />
           </div>
         </div>
       </section>
@@ -139,20 +144,16 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6">
           <h1 className=" text-3xl md:text-5xl font-extrabold leading-tight">
             <span className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text text-center text-transparent">
-              About Me
+              {t("about.title")}
             </span>
           </h1>
 
           <p className="mt-5 text-lg text-gray-400 text-center text-wrap max-w-l mb-5">
-            Hello, I'm Eder Moros, a passionate about building smart and
-            scalable web applications. I'm currently studying a Higher
-            Vocational Degree in Web Application Development and teaching myself
-            varius technologies. <br />I plan to transition into the AI and data
-            science industry around 2027.
+            {t("about.description")}
           </p>
           <div className="flex justify-center">
             <Button
-              text="Ver CV"
+              text={t("about.cvBtn")}
               href={cv_path}
               external
               IconComponent={CvIcon}
@@ -168,7 +169,7 @@ export default function App() {
               id="projects"
               className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text  text-center text-transparent"
             >
-              Projects
+              {t("projects.title")}
             </span>
           </h1>
 
@@ -187,7 +188,7 @@ export default function App() {
               id="contact"
               className="block bg-linear-to-r from-[#fad4d8] to-[#fc440f] bg-clip-text  text-center text-transparent"
             >
-              Contact Me
+              {t("contact.title")}
             </span>
           </h1>
           <Contact />
